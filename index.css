@@ -1,0 +1,807 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+:root {
+    --font-color:  rgb(25, 0, 70);
+    --primary-blue-color: rgb(97, 187, 252);
+    --primary-pink-color: rgb(252, 97, 252);
+    --primary-purple-color: rgb(225, 66, 254);
+}
+body {
+    background-color: rgb(236, 246, 253);
+}
+.header {
+    padding: 0 2rem;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: aliceblue;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    position: relative;
+    flex-wrap: wrap;
+}
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    z-index: 1;
+}
+.menu-bar {
+    cursor: pointer;
+}
+.search-log-cart {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+.search-bar {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--font-color);
+}
+.search-bar input {
+    outline: none;
+    padding: 8px 1rem;
+    width: 300px;
+    border: none;
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    background-color: transparent;
+}
+.search-bar div {
+    width: 32px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(230, 238, 246);
+    cursor: pointer;
+}
+.search-bar div:hover {
+    background-color: rgb(211, 223, 234);
+    transition: 0.2s;
+}
+.login {
+    padding: 10px 1rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    border: none;
+    background-color: rgb(97, 187, 252);
+    color: #fff;
+    cursor: pointer;
+}
+.login:hover {
+    background-color: rgb(87, 169, 228);
+}
+.cart {
+    cursor: pointer;
+}
+.cart-div {
+    height: 40px;
+    width: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.total {
+    background-color: red;
+    border-radius: 50%;
+    color: #fff;
+    padding: 2px 6px;
+    font-size: 13px;
+    position: absolute;
+    top: -4px;
+    right: -4px;
+}
+.cart-div:hover {
+    border-radius: 100%;
+    background-color: rgb(233, 241, 246);
+}
+.sidish {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 300px;
+    height: 100vh;
+    background-color: aliceblue;
+    box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.09);
+    z-index: -1;
+    transition: 1s;
+}
+.sidish.active {
+    left: 0;
+    transition: 0.3s;
+}
+.navigator {
+    padding: 6rem 2rem 2rem 2rem;
+}
+.navigator h4 a {
+    text-decoration: none;
+    color: rgb(42, 27, 69);
+    font-size: 14px;
+    font-weight: 400;
+}
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: .6rem;
+    padding: .5rem;
+    cursor: pointer;
+}
+.nav:hover {
+    background-color: rgba(0, 0, 0, 0.09);
+    transition: 0.3s;
+}
+.activate {
+    background-color: rgba(0, 0, 0, 0.09);
+}
+.line {
+    width: 100%;
+    height: .5px;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+}
+.sidish .sent {
+    font-size: 13px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.4);
+    padding: 1rem 25px;
+}
+.login2 {
+    width: 250px;
+    margin: .5rem 25px;
+    padding: .5rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    border: 1px solid var(--primary-blue-color);
+    background-color: transparent;
+    color:var(--primary-blue-color);
+    cursor: pointer;
+}
+.login2:hover {
+    background-color: rgb(235, 241, 246);
+}
+.main {
+    width: 100%;
+    height: 87vh;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 18% 59% 20%;
+    column-gap: 1rem;
+}
+.left-elements {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction:column;
+    align-items: flex-start;
+    row-gap: 1rem;
+}
+.left-menu {
+    width: 100%;
+    height: 70%;
+    background-color: aliceblue;
+    border-radius: 8px;
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    padding: 1.5rem;
+}
+.discount-section {
+    width: 100%;
+    height: 30%;
+    background-color: aliceblue;
+    border-radius: 8px;
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    background-image: url("t shirts/tdiscount.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+.tint {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.discount-section:hover {
+    transform: scale(1.3);
+    transition: 0.3s;
+}
+.tint h4 {
+    color: #fff;
+    font-size: 34px;
+    font-weight: 300;
+}
+.tint h6 {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 300;
+}
+.products {
+    width: 100%;
+    height: 100%;
+    background-color: aliceblue;
+    border-radius: 8px;
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    padding: 2rem 2rem .5rem 2rem;
+    overflow-y: scroll;
+}
+.products::-webkit-scrollbar {
+    display: none;
+}
+.right-elements {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+.evaluated {
+    width: 100%;
+    height: 30%;
+    background-color: aliceblue;
+    border-radius: 8px;
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    padding: 1rem;
+    background-image: linear-gradient(to right,var(--primary-blue-color), var(--primary-purple-color), var(--primary-pink-color));
+}
+.featured-products {
+    width: 100%;
+    height: 400px;
+    background-color: aliceblue;
+    border-radius: 8px;
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    padding: 1rem;
+    overflow-y: scroll;
+}
+.featured-products::-webkit-scrollbar {
+    display: none;
+}
+.featured-products h4 {
+    font-size: 20px;
+    text-align: center;
+    margin: 1rem 0 2rem 0;
+    color: var(--font-color);
+}
+.featured-card {
+    width: 100%;
+    height: 240px;
+    position: relative;
+    margin-bottom: 2rem;
+}
+.featured-card:hover {
+    padding: .5rem;
+    border: 1px solid var(--font-color);
+    transition: 0.3s;
+}
+.featured-card img {
+    width: 100%;
+}
+.featured-card h5 {
+    color: var(--font-color);
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+.featured-card .price {
+    font-size: 17px;
+    color: var(--font-color);
+}
+.navigator2 {
+    width: 100%;
+    height: 100%;
+}
+.navigator2 h4 a {
+    text-decoration: none;
+    color: var(--font-color);
+    font-size: 14px;
+    font-weight: 400;
+}
+.nav2 {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: .6rem;
+    padding: .5rem;
+    cursor: pointer;
+}
+.nav2:hover {
+    background-color: rgba(0, 0, 0, 0.09);
+    transition: 0.3s;
+}
+.products .title {
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--font-color);
+    margin-bottom: 4rem;
+}
+.product-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    row-gap: 6rem;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+.product-card {
+    width: 210px;
+    height: 230px;
+    position: relative;
+    transition: 0.3s;
+}
+.product-card:hover {
+    padding: .5rem;
+    border: 1px solid var(--font-color);
+    transition: 0.3s;
+}
+.product-card img {
+    width: 100%;
+}
+.product-card h5 {
+    color: var(--font-color);
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+.product-card .price {
+    font-size: 17px;
+    color: var(--font-color);
+}
+.add-cart,
+.add-carts2 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: var(--primary-blue-color);
+    padding: 6px;
+    cursor: pointer;
+}
+.add-cart2 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: var(--primary-pink-color);
+    padding: 6px;
+    cursor: pointer;
+}
+.evaluated h4 {
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    color: #fff;
+    letter-spacing: 2px;
+}
+.evaluated .ratings {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+    margin-top: .5rem;
+}
+.evaluated .sales {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+    margin-top: .5rem;
+}
+.ratings h6 {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+}
+.sales h6 {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.banner-container {
+    width: 100%;
+    height: 400px;
+    margin: 2rem 0;
+}
+.banner-content {
+    width: 100%;
+    height: 100%;
+    background-image: url('cartbanner.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:contain;
+    object-fit:cover;
+}
+.banner{
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+}
+.cart-container {
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+}
+.table {
+    width: 100%;
+    height:auto;
+}
+.cart-header {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.cart-header p {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--font-color);
+}
+.cart-per-product {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 3rem;
+}
+.cart-per-product td:nth-child(1) {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--font-color);
+    text-align: left;
+    width: 150px;
+}
+.img-space {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cart-per-product td:nth-child(2) img {
+    width: 100px;
+    height: auto;
+    object-fit: cover;
+}
+.cart-per-product td:nth-child(3) div {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--font-color);
+}
+.cart-per-product td:nth-child(4) input {
+    width: 50px;
+    padding: 4px;
+    outline: none;
+    border: 1px solid var(--font-color);
+}
+.cart-per-product td:nth-child(5) svg {
+    cursor: pointer;
+}
+.cart-total {
+    margin-top: 1.5rem;
+    padding: 1rem 2rem;
+    border-top: 1px solid var(--font-color);
+    text-align: end;
+    font-size: 26px;
+    color: var(--font-color);
+    font-weight: 500;
+}
+.cart-total span {
+    color: var(--font-color);
+    font-size: 14px;
+    font-weight: 400;
+}
+.checkout {
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.checking-out {
+    background-color: var(--font-color);
+    font-size: 32px;
+    color: #fff;
+    padding: 1rem 2rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    cursor: pointer;
+    position: relative;
+    transition: .3s;
+}
+.checking-out::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 96%;
+    background-color: #fff;
+    border: 2px solid var(--font-color);
+    transition: .3s;
+}
+.checking-out:hover::before {
+    width: 100%;
+    transition: .3s;
+    z-index: -1;
+}
+.checking-out:hover {
+    color: var(--font-color);
+    transition: .3s;
+    z-index: 1;
+}
+
+.about {
+    margin-top: 10rem;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.about h2 {
+    width: 60%;
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: var(--font-color);
+}
+.about div {
+    width: 100%;
+    height: 1px;
+    background-color: var(--primary-purple-color);
+    margin: 3rem 0;
+}
+.about h3 {
+    width: 80%;
+    text-align: center;
+    color: var(--font-color);
+    font-weight: 300;
+    letter-spacing: 2px;
+    font-size: 14px;
+
+}
+.login-form {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+.login-form-active {
+    display: block;
+}
+.form {
+    width: 600px;
+    height: 500px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5rem 4rem 4rem 4rem;
+    transform: scale(0);
+    transition: 0.3s;
+    position: relative;
+    top: 15%;
+    left: 25%;
+}
+.active-form {
+    transform: scale(1);
+    transition: 0.3s;
+}
+.form input[type=text] {
+    outline: none;
+    width: 100%;
+    height: 40px;
+    padding: 1rem;
+    border-radius: 20px;
+    border: 1px solid var(--primary-blue-color);
+    color: var(--font-color);
+    font-weight: 500;
+}
+.form input[type=password] {
+    outline: none;
+    width: 100%;
+    height: 40px;
+    padding: 1rem;
+    border-radius: 20px;
+    border: 1px solid var(--primary-pink-color);
+    color: var(--font-color);
+    font-weight: 500;
+    margin: 1rem 0 2rem 0;
+}
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    width: 100%;
+    margin-bottom: 3rem;
+}
+.buttons #login {
+    width: 200px;
+    height: 60px;
+    border: none;
+    background-color: var(--primary-blue-color);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    transition: 0.3s;
+}
+.buttons #login:hover {
+    color: var(--primary-blue-color);
+    z-index: 1;
+    transition: 0.3s;
+}
+.buttons #login::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 99%;
+    background-color: #fff;
+    transition: 0.3s;
+    z-index: -1;
+}
+.buttons #login:hover::before {
+    width: 100%;
+    transition: 0.3s;
+    border: 1px solid var(--primary-blue-color);
+}
+.buttons #signup {
+    width: 200px;
+    height: 60px;
+    border: none;
+    background-color: var(--primary-pink-color);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    transition: 0.3s;
+}
+.buttons #signup:hover {
+    color: var(--primary-pink-color);
+    z-index: 1;
+    transition: 0.3s;
+}
+.buttons #signup::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 99%;
+    background-color: #fff;
+    transition: 0.3s;
+    z-index: -1;
+}
+.buttons #signup:hover::before {
+    width: 100%;
+    transition: 0.3s;
+    border: 1px solid var(--primary-pink-color);
+}
+.buttons .line3 {
+    height: 65px;
+    width: 1px;
+    background-color: var(--font-color);
+}
+.form .line2 {
+    width: 100%;
+    height: 1px;
+    background-color: var(--font-color);
+    margin-bottom: 2rem;
+}
+.form .accounts {
+    width: 40%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.ex-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+.hero {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+}
+.hero-img {
+    height: 55%;
+    width: 50%;
+    margin-bottom: 2rem;
+}
+.hero h1 {
+    color: var(--font-color);
+    font-size: 64px;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+.hero h6 {
+    font-size: 48px;
+    color: var(--font-color);
+    margin-bottom: 3rem;
+}
+.hero h6 span {
+    color: var(--primary-pink-color);
+}
+.hero button {
+    padding: 1rem 2.5rem;
+    font-size: 24px;
+    cursor: pointer;
+    font-weight: 500;
+    border: none;
+    background-color: var(--font-color);
+    color: #fff;
+    position: relative;
+    transition: 0.3s;
+    margin: 2rem 0;
+}
+.hero button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 100%;
+    background-color: #fff;
+    z-index: -1;
+}
+.hero button:hover {
+    color: var(--font-color);
+    transition: 0.3s;
+    z-index: 1;
+}
+.hero button:hover::before {
+    height: 97%;
+    width: 100%;
+    border: 1px solid var(--font-color);
+    transition: 0.3s;
+    z-index: -1;
+}
+.domain {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(25, 20, 34);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 5rem;
+}
+.domain p {
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 180%;
+    letter-spacing: 2px;
+}
